@@ -1,0 +1,23 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <DCC_UsePackage>vclwinx;DataSnapServer;frxIBX28;fmx;emshosting;vclie;DbxCommonDriver;bindengine;IndyIPCommon;VCLRESTComponents;DBXMSSQLDriver;FireDACCommonODBC;emsclient;FireDACCommonDriver;fsIBX28;appanalytics;IndyProtocols;vclx;frxe28;IndyIPClient;dbxcds;vcledge;frxTee28;bindcompvclwinx;FmxTeeUI;frxFD28;emsedge;bindcompfmx;DBXFirebirdDriver;fsDB28;inetdb;frxADO28;ibmonitor;FireDACSqliteDriver;DbxClientDriver;FireDACASADriver;Tee;soapmidas;vclactnband;TeeUI;frxIntIO28;fmxFireDAC;dbexpress;FireDACInfxDriver;frxDBX28;DBXMySQLDriver;VclSmp;inet;DataSnapCommon;vcltouch;fmxase;frx28;DBXOdbcDriver;fsFD28;dbrtl;FireDACDBXDriver;FireDACOracleDriver;QRWRunDXE11_w64;fmxdae;TeeDB;FireDACMSAccDriver;CustomIPTransport;FireDACMSSQLDriver;DataSnapIndy10ServerTransport;DataSnapConnectors;vcldsnap;DBXInterBaseDriver;frxDB28;FireDACMongoDBDriver;IndySystem;FireDACTDataDriver;vcldb;ibxbindings;frxIntIOIndy28;vclFireDAC;fs28;bindcomp;FireDACCommon;DataSnapServerMidas;FireDACODBCDriver;emsserverresource;IndyCore;RESTBackendComponents;fsTee28;bindcompdbx;frxHTML28;rtl;FireDACMySQLDriver;FireDACADSDriver;RESTComponents;DBXSqliteDriver;vcl;IndyIPServer;dsnapxml;dsnapcon;DataSnapClient;DataSnapProviderClient;adortl;DBXSybaseASEDriver;DBXDb2Driver;frxcs28;vclimg;DataSnapFireDAC;emsclientfiredac;FireDACPgDriver;FireDAC;FireDACDSDriver;inetdbxpress;xmlrtl;tethering;ibxpress;frxPDF28;bindcompvcl;dsnap;fsADO28;CloudService;DBXSybaseASADriver;DBXOracleDriver;FireDACDb2Driver;DBXInformixDriver;vclib;fmxobj;bindcompvclsmp;DataSnapNativeClient;FMXTee;DatasnapConnectorsFreePascal;soaprtl;soapserver;FireDACIBDriver;$(DCC_UsePackage)</DCC_UsePackage>
+        <DCC_Namespace>Winapi;System.Win;Data.Win;Datasnap.Win;Web.Win;Soap.Win;Xml.Win;Bde;$(DCC_Namespace)</DCC_Namespace>
+        <BT_BuildType>Debug</BT_BuildType>
+        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+        <VerInfo_Keys>CompanyName=;FileDescription=$(MSBuildProjectName);FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProgramID=com.embarcadero.$(MSBuildProjectName);ProductName=$(MSBuildProjectName);ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
+        <VerInfo_Locale>1033</VerInfo_Locale>
+        <Manifest_File>$(BDS)\bin\default_app.manifest</Manifest_File>
+        <DCC_UnitSearchPath>C:\Users\Babingthon\Desktop\Sistema_Pedidos\Source\Controller;C:\Users\Babingthon\Desktop\Sistema_Pedidos\Source\Model;C:\Users\Babingthon\Desktop\Sistema_Pedidos\Source\Shared;C:\Users\Babingthon\Desktop\Sistema_Pedidos\Source\View;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
+        <DCC_ExeOutput>C:\Users\Babingthon\Desktop\Sistema_Pedidos\App</DCC_ExeOutput>
+        <AppDPIAwarenessMode>none</AppDPIAwarenessMode>
+        <DCC_DcuOutput>C:\Users\Babingthon\Desktop\Sistema_Pedidos\App</DCC_DcuOutput>
+    </PropertyGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Delphi.Personality.12</Borland.Personality>
+        <Borland.ProjectType>OptionSet</Borland.ProjectType>
+        <BorlandProject>
+            <Delphi.Personality/>
+        </BorlandProject>
+        <ProjectFileVersion>12</ProjectFileVersion>
+    </ProjectExtensions>
+</Project>

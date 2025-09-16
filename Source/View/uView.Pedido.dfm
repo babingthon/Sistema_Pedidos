@@ -1,0 +1,723 @@
+object ViewPedido: TViewPedido
+  Left = 0
+  Top = 0
+  Caption = 'Pedidos'
+  ClientHeight = 651
+  ClientWidth = 745
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -12
+  Font.Name = 'Segoe UI'
+  Font.Style = []
+  KeyPreview = True
+  Position = poMainFormCenter
+  OnShow = FormShow
+  TextHeight = 15
+  object PgPedidos: TPageControl
+    Left = 0
+    Top = 0
+    Width = 745
+    Height = 651
+    ActivePage = TsConsulta
+    Align = alClient
+    TabOrder = 0
+    ExplicitLeft = 32
+    ExplicitTop = 192
+    ExplicitWidth = 633
+    ExplicitHeight = 369
+    object TsNovoPedido: TTabSheet
+      Caption = 'Novo Pedido'
+      object gbCliente: TGroupBox
+        AlignWithMargins = True
+        Left = 3
+        Top = 3
+        Width = 731
+        Height = 46
+        Align = alTop
+        Caption = 'Selecione o Cliente'
+        DefaultHeaderFont = False
+        HeaderFont.Charset = DEFAULT_CHARSET
+        HeaderFont.Color = clWindowText
+        HeaderFont.Height = -12
+        HeaderFont.Name = 'Segoe UI'
+        HeaderFont.Style = [fsBold]
+        TabOrder = 0
+        ExplicitTop = 0
+        object cmbCliente: TComboBox
+          AlignWithMargins = True
+          Left = 5
+          Top = 20
+          Width = 721
+          Height = 23
+          Align = alTop
+          Style = csDropDownList
+          TabOrder = 0
+          OnChange = cmbClienteChange
+          ExplicitWidth = 609
+        end
+      end
+      object plnCliente: TPanel
+        AlignWithMargins = True
+        Left = 3
+        Top = 55
+        Width = 731
+        Height = 44
+        Align = alTop
+        BevelOuter = bvNone
+        Enabled = False
+        TabOrder = 1
+        ExplicitLeft = -2
+        ExplicitWidth = 739
+        object edtCodigoCliente: TLabeledEdit
+          Left = 13
+          Top = 16
+          Width = 68
+          Height = 23
+          Color = clCream
+          EditLabel.Width = 38
+          EditLabel.Height = 15
+          EditLabel.Caption = 'C'#243'digo'
+          EditLabel.Color = clInfoBk
+          EditLabel.Font.Charset = DEFAULT_CHARSET
+          EditLabel.Font.Color = clWindowText
+          EditLabel.Font.Height = -12
+          EditLabel.Font.Name = 'Segoe UI'
+          EditLabel.Font.Style = [fsBold]
+          EditLabel.ParentColor = False
+          EditLabel.ParentFont = False
+          TabOrder = 0
+          Text = ''
+        end
+        object edtNomeCliente: TLabeledEdit
+          Left = 87
+          Top = 16
+          Width = 472
+          Height = 23
+          Color = clCream
+          EditLabel.Width = 34
+          EditLabel.Height = 15
+          EditLabel.Caption = 'Nome'
+          EditLabel.Color = clInfoBk
+          EditLabel.Font.Charset = DEFAULT_CHARSET
+          EditLabel.Font.Color = clWindowText
+          EditLabel.Font.Height = -12
+          EditLabel.Font.Name = 'Segoe UI'
+          EditLabel.Font.Style = [fsBold]
+          EditLabel.ParentColor = False
+          EditLabel.ParentFont = False
+          TabOrder = 1
+          Text = ''
+        end
+        object edtCidadeUfCliente: TLabeledEdit
+          Left = 565
+          Top = 16
+          Width = 154
+          Height = 23
+          Color = clCream
+          EditLabel.Width = 63
+          EditLabel.Height = 15
+          EditLabel.Caption = 'Cidade - UF'
+          EditLabel.Color = clInfoBk
+          EditLabel.Font.Charset = DEFAULT_CHARSET
+          EditLabel.Font.Color = clWindowText
+          EditLabel.Font.Height = -12
+          EditLabel.Font.Name = 'Segoe UI'
+          EditLabel.Font.Style = [fsBold]
+          EditLabel.ParentColor = False
+          EditLabel.ParentFont = False
+          TabOrder = 2
+          Text = ''
+        end
+      end
+      object plnProduto: TPanel
+        AlignWithMargins = True
+        Left = 3
+        Top = 105
+        Width = 731
+        Height = 44
+        Align = alTop
+        BevelOuter = bvNone
+        TabOrder = 2
+        ExplicitTop = 155
+        object btnInserirItem: TSpeedButton
+          Left = 609
+          Top = 8
+          Width = 115
+          Height = 30
+          Caption = 'Adicionar'
+          Glyph.Data = {
+            F6060000424DF606000000000000360000002800000018000000180000000100
+            180000000000C0060000120B0000120B00000000000000000000FFFFFFFFFFFF
+            FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+            FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+            FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+            FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+            FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFC
+            FDFAC3D9AF8BB663669C33519017508E16629A3087B161C1D6AEFBFDFAFFFFFF
+            FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+            FFFFFFFFC8DDB567A1334D90104C8E0F4B8D0E498B0D488A0D47880C46870B45
+            850A5E952CC4D8B2FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+            FFFFFFFFFFFFFEFEFDA1C6805194134F93124E91114D90104C8E0F4B8D0E498B
+            0D488A0D47880C46870B45850A43840999BC7AFEFEFDFFFFFFFFFFFFFFFFFFFF
+            FFFFFFFFFFFFFFFFFFFFFFFFFFFFA2C77F5398155296145194134F93124E9111
+            4D90104C8E0F4B8D0E498B0D488A0D47880C46870B45850A4384099ABC7BFFFF
+            FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFC9DFB4559B1654991553981552
+            96145194134F93124D8E1198BA7997B9784A8A0E498B0D488A0D47880C46870B
+            45850A438409C4D8B2FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFCFDFA70AC39579C
+            17559B165499155398155296145194134C8E12FFFFFFFFFFFF49890F4B8D0E49
+            8B0D488A0D47880C46870B45850A5B942AFBFCF9FFFFFFFFFFFFFFFFFFFFFFFF
+            C7DFB2599F19589E18579C17559B165499155398155296144E8F13FFFFFFFFFF
+            FF4A8B104C8E0F4B8D0E498B0D488A0D47880C46870B45850AC1D6AEFFFFFFFF
+            FFFFFFFFFFFFFFFF94C26B5AA11A599F19589E18579C17559B16549915539815
+            4F9014FFFFFFFFFFFF4B8C114D90104C8E0F4B8D0E498B0D488A0D47880C4687
+            0B87B062FFFFFFFFFFFFFFFFFFFFFFFF74B23E5BA21B5AA11A599F19579B1853
+            95165194155092154D8E13FFFFFFFFFFFF4A8A104B8B114A8A1049880F4A8A0E
+            498B0D488A0D47880C629A30FFFFFFFFFFFFFFFFFFFFFFFF66A8275DA41C5BA2
+            1B5AA11A9BC07AFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+            FFFFFFFFFF95B7744B8D0E498B0D488A0D508F18FFFFFFFFFFFFFFFFFFFFFFFF
+            67AA285EA51C5DA41C5BA21B9CC17BFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+            FFFFFFFFFFFFFFFFFFFFFFFFFF95B8754C8E0F4B8D0E498B0D519017FFFFFFFF
+            FFFFFFFFFFFFFFFF76B53F5FA71D5EA51C5DA41C5A9E1B569A19559818549717
+            519115FFFFFFFFFFFF4D8E134E8F144D8E134B8D124D8E114D90104C8E0F4B8D
+            0E659D31FFFFFFFFFFFFFFFFFFFFFFFF98C76C60A81E5FA71D5EA51C5DA41C5B
+            A21B5AA11A599F19559817FFFFFFFFFFFF5193155398155296145194134F9312
+            4E91114D90104C8E0F8BB663FFFFFFFFFFFFFFFFFFFFFFFFCAE2B361AA1F60A8
+            1E5FA71D5EA51C5DA41C5BA21B5AA11A569918FFFFFFFFFFFF52951554991553
+            98155296145194134F93124E91114D9010C3D9AFFFFFFFFFFFFFFFFFFFFFFFFF
+            FBFDFA78B73F61AA1F60A81E5FA71D5EA51C5DA41C5BA21B579B19FFFFFFFFFF
+            FF549616559B165499155398155296145194134F9312659E30FBFCF9FFFFFFFF
+            FFFFFFFFFFFFFFFFFFFFFFCDE4B763AB2061AA1F60A81E5FA71D5EA51C5DA41C
+            5A9E1B99BF7798BE76579B18579C17559B16549915539815529614519413C8DD
+            B5FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFAAD28563AB2061AA1F60
+            A81E5FA71D5EA51C5DA41C5BA21B5AA11A599F19589E18579C17559B16549915
+            539815A2C781FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFDFE
+            FCAAD28563AB2061AA1F60A81E5FA71D5EA51C5DA41C5BA21B5AA11A599F1958
+            9E18579C17559B16A2C77FFEFEFDFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+            FFFFFFFFFFFFFFFFFFFFFFFFCDE4B778B53E61AA1F60A81E5FA71D5EA51C5DA4
+            1C5BA21B5AA11A599F196FAA38C9DFB4FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+            FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFBFDFACAE2B397C86D
+            77B44066AB2765A92676B23F94C26BC7DFB2FBFDFAFFFFFFFFFFFFFFFFFFFFFF
+            FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+            FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+            FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+            FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+            FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF}
+          OnClick = btnInserirItemClick
+        end
+        object edtCodigoProduto: TLabeledEdit
+          Left = 13
+          Top = 16
+          Width = 44
+          Height = 23
+          Color = clCream
+          EditLabel.Width = 38
+          EditLabel.Height = 15
+          EditLabel.Caption = 'C'#243'digo'
+          EditLabel.Color = clInfoBk
+          EditLabel.Font.Charset = DEFAULT_CHARSET
+          EditLabel.Font.Color = clWindowText
+          EditLabel.Font.Height = -12
+          EditLabel.Font.Name = 'Segoe UI'
+          EditLabel.Font.Style = [fsBold]
+          EditLabel.ParentColor = False
+          EditLabel.ParentFont = False
+          TabOrder = 0
+          Text = ''
+          OnExit = edtCodigoProdutoExit
+        end
+        object edtDescricaoProduto: TLabeledEdit
+          Left = 63
+          Top = 16
+          Width = 344
+          Height = 23
+          Color = clCream
+          EditLabel.Width = 45
+          EditLabel.Height = 15
+          EditLabel.Caption = 'Produto'
+          EditLabel.Color = clInfoBk
+          EditLabel.Font.Charset = DEFAULT_CHARSET
+          EditLabel.Font.Color = clWindowText
+          EditLabel.Font.Height = -12
+          EditLabel.Font.Name = 'Segoe UI'
+          EditLabel.Font.Style = [fsBold]
+          EditLabel.ParentColor = False
+          EditLabel.ParentFont = False
+          ReadOnly = True
+          TabOrder = 1
+          Text = ''
+        end
+        object edtValorUnitario: TLabeledEdit
+          Left = 494
+          Top = 16
+          Width = 107
+          Height = 23
+          Alignment = taRightJustify
+          Color = clCream
+          EditLabel.Width = 76
+          EditLabel.Height = 15
+          EditLabel.Caption = 'Valor Unit'#225'rio'
+          EditLabel.Color = clInfoBk
+          EditLabel.Font.Charset = DEFAULT_CHARSET
+          EditLabel.Font.Color = clWindowText
+          EditLabel.Font.Height = -12
+          EditLabel.Font.Name = 'Segoe UI'
+          EditLabel.Font.Style = [fsBold]
+          EditLabel.ParentColor = False
+          EditLabel.ParentFont = False
+          ReadOnly = True
+          TabOrder = 3
+          Text = ''
+        end
+        object edtQuantidade: TLabeledEdit
+          Left = 413
+          Top = 16
+          Width = 75
+          Height = 23
+          Alignment = taRightJustify
+          Color = clCream
+          EditLabel.Width = 64
+          EditLabel.Height = 15
+          EditLabel.Caption = 'Quantidade'
+          EditLabel.Color = clInfoBk
+          EditLabel.Font.Charset = DEFAULT_CHARSET
+          EditLabel.Font.Color = clWindowText
+          EditLabel.Font.Height = -12
+          EditLabel.Font.Name = 'Segoe UI'
+          EditLabel.Font.Style = [fsBold]
+          EditLabel.ParentColor = False
+          EditLabel.ParentFont = False
+          NumbersOnly = True
+          TabOrder = 2
+          Text = ''
+        end
+      end
+      object gbItens: TGroupBox
+        Left = 0
+        Top = 152
+        Width = 737
+        Height = 469
+        Align = alClient
+        Caption = 'Itens'
+        DefaultHeaderFont = False
+        HeaderFont.Charset = DEFAULT_CHARSET
+        HeaderFont.Color = clWindowText
+        HeaderFont.Height = -12
+        HeaderFont.Name = 'Segoe UI'
+        HeaderFont.Style = [fsBold]
+        TabOrder = 3
+        ExplicitLeft = 240
+        ExplicitTop = 272
+        ExplicitWidth = 185
+        ExplicitHeight = 105
+        object grdItens: TStringGrid
+          AlignWithMargins = True
+          Left = 5
+          Top = 20
+          Width = 727
+          Height = 408
+          Align = alClient
+          DefaultColWidth = 120
+          FixedCols = 0
+          Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goRowSelect, goFixedRowDefAlign]
+          TabOrder = 0
+          OnKeyDown = grdItensKeyDown
+          ExplicitLeft = 90
+          ExplicitTop = 120
+          ExplicitWidth = 320
+          ExplicitHeight = 120
+        end
+        object plnItens: TPanel
+          AlignWithMargins = True
+          Left = 5
+          Top = 434
+          Width = 727
+          Height = 30
+          Align = alBottom
+          BevelOuter = bvNone
+          TabOrder = 1
+          object btnGravarPedido: TSpeedButton
+            Left = 0
+            Top = 0
+            Width = 145
+            Height = 30
+            Align = alLeft
+            Caption = 'Gravar Pedido'
+            Glyph.Data = {
+              F6060000424DF606000000000000360000002800000018000000180000000100
+              180000000000C0060000120B0000120B00000000000000000000FFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEFC35BE9AF
+              28E9AE27EBDDBDE8E8E8E6E6E6E4E4E4E1E1E1DFDFDFDDDDDDDADADAD8D8D8D5
+              D5D5D3D3D3D6C6A7E5A420E5A31FEAB854FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFEAB0299B5A11E9AF28EDEDEDEBEBEBE8E8E8E6E6E6E4E4E4E1E1E1DFDF
+              DFDDDDDDDADADAD8D8D8D5D5D5D3D3D3E5A5209B5A11E5A31FFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFEAB129EAB029EAB028EFEFEFEDEDEDEBEBEBE8E8E8
+              E6E6E6E4E4E4E1E1E1DFDFDFDDDDDDDADADAD8D8D8D5D5D5E6A621E5A520E5A4
+              20FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEBB22AEAB129EAB029F2F2F2EF
+              EFEFEDEDEDEBEBEBE8E8E8E6E6E6E4E4E4E1E1E1DFDFDFDDDDDDDADADAD8D8D8
+              E6A621E6A621E5A520FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEBB32AEBB2
+              2AEAB129F4F4F4F2F2F2EFEFEFEDEDEDEBEBEBE8E8E8E6E6E6E4E4E4E1E1E1DF
+              DFDFDDDDDDDADADAE6A722E6A621E6A621FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFEBB42BEBB32AEBB22AF7F7F7F4F4F4F2F2F2EFEFEFEDEDEDEBEBEBE8E8
+              E8E6E6E6E4E4E4E1E1E1DFDFDFDDDDDDE6A822E6A722E6A621FFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFEBB42CEBB42BEBB32AF9F9F9F7F7F7F4F4F4F2F2F2
+              EFEFEFEDEDEDEBEBEBE8E8E8E6E6E6E4E4E4E1E1E1DFDFDFE7A923E6A822E6A7
+              22FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFECB52CEBB42CEBB42BF8ECCDF9
+              F9F9F7F7F7F4F4F4F2F2F2EFEFEFEDEDEDEBEBEBE8E8E8E6E6E6E4E4E4E2D4B4
+              E7AA24E7A923E6A822FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFECB62DECB5
+              2CEBB42CEBB42BEBB32AEBB22AEAB129EAB029EAB028E9AF28E9AE27E9AD26E8
+              AD26E8AC25E8AB25E7AA24E7AA24E7A923FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFECB72DECB62DECB52CEBB42CEBB42BEBB32AEBB22AEAB129EAB029EAB0
+              28E9AF28E9AE27E9AD26E8AD26E8AC25E8AB25E7AA24E7AA24FFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFEDB72EECB72DECB62DECB52CEBB42CEBB42BEBB32A
+              EBB22AEAB129EAB029EAB028E9AF28E9AE27E9AD26E8AD26E8AC25E8AB25E7AA
+              24FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEDB82EEDB72EEBB62CE9AD26E8
+              AB26E2A624E1A624E1A623E1A523E1A523E1A423E1A422E1A422E1A422E7AC25
+              E8AD26E8AC25E8AB25FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEDB92FEDB8
+              2EEAAE27E6A41FDFB256E3DED9E3E0DDE3DFDDE1DEDBE0DDDADEDAD7DCD8D5D9
+              D5D2D6D1C9D8AD53E9AD26E8AD26E8AC25FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFEEBA30EDB92FE9AE27E6A41FE1C07FE7E4E2E7E4E2E6E3E1E5E2E0E3E0
+              DEC7AD79AD7C17C5AA76D9D5D1D6B777E9AE27E9AD26E8AD26FFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFEEBA30EEBA30E9AE27E6A41FE2C281EAE8E6EAE8E6
+              E9E7E5E8E5E3E6E3E1C9AE7BAD7C17C6AB78DBD8D4D7B978E9AF28E9AE27E9AD
+              26FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEEBB31EEBA30EAAF28E6A41FE4
+              C483EEEBEAEDEBEAECEAE9EBE8E7E9E6E4CAB07DAD7C17C7AC79DDDAD6D8BA79
+              EAB028E9AF28ECBB49FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEFBC31EEBB
+              31EAAF28E6A41FE5C585F1EFEEF1EEEDEFEDECEEEBEAEBE9E7CBB17EAD7C17C8
+              AD7ADFDBD8D9BB7AEAB029ECB840FCF4E2FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFF3CB61EFBC31EAAF28E6A41FE7C786F4F2F1F4F2F1F2F0EFF0EEEDEDEB
+              E9EAE8E6E7E4E2E4E1DEE0DDDAD9BC7CECBD4AFCF5E4FFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF}
+            OnClick = btnGravarPedidoClick
+          end
+          object edtValorTotal: TLabeledEdit
+            AlignWithMargins = True
+            Left = 604
+            Top = 4
+            Width = 120
+            Height = 23
+            Margins.Top = 4
+            Align = alRight
+            Alignment = taRightJustify
+            Color = clCream
+            EditLabel.Width = 79
+            EditLabel.Height = 23
+            EditLabel.Caption = 'Valor Unit'#225'rio:'
+            EditLabel.Color = clInfoBk
+            EditLabel.Font.Charset = DEFAULT_CHARSET
+            EditLabel.Font.Color = clWindowText
+            EditLabel.Font.Height = -12
+            EditLabel.Font.Name = 'Segoe UI'
+            EditLabel.Font.Style = [fsBold]
+            EditLabel.ParentColor = False
+            EditLabel.ParentFont = False
+            LabelPosition = lpLeft
+            ReadOnly = True
+            TabOrder = 0
+            Text = ''
+          end
+        end
+      end
+    end
+    object TsConsulta: TTabSheet
+      Caption = 'Consulta Pedidos'
+      ImageIndex = 1
+      object gbBuscarPedido: TGroupBox
+        Left = 0
+        Top = 0
+        Width = 737
+        Height = 49
+        Align = alTop
+        Caption = 'Buscar Pedido'
+        DefaultHeaderFont = False
+        HeaderFont.Charset = DEFAULT_CHARSET
+        HeaderFont.Color = clWindowText
+        HeaderFont.Height = -12
+        HeaderFont.Name = 'Segoe UI'
+        HeaderFont.Style = [fsBold]
+        TabOrder = 0
+        object btnBuscarPedido: TSpeedButton
+          Left = 143
+          Top = 16
+          Width = 136
+          Height = 30
+          Caption = 'Buscar Pedido'
+          Glyph.Data = {
+            F6060000424DF606000000000000360000002800000018000000180000000100
+            180000000000C0060000120B0000120B00000000000000000000FFFFFFFFFFFF
+            FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+            FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF4D8A5EC
+            BC65FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+            FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEFAFFF6D0FFF1BDFFF3CCFFFE
+            F9F9E4B5E39D1EF4D8A5FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+            FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFDEAFFF199FFEA7F
+            FFE678FFE271FBDD76DBB134F9E4B5FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+            FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFBFF
+            F59EFFF28DFFEE87FFEA7FFFE678FFE271FBDD76FFFEF9FFFFFFFFFFFFFFFFFF
+            FFEC78FFE650FFE650FFE650FFE650FFE650FFE650FFE650FFE650FFE650FFE6
+            50FFE650E6D863FFF898FFF592FFF28DFFEE87FFEA7FFFE678FFE271FFF3CBFF
+            FFFFFFFFFFFFFFFFFFE650FFE650FFE650FFE650FFE650FFE650FFE650FFE650
+            FFE650FFE650FFE650FFE650E7DB6EFFFB9DFFF898FFF592FFF28DFFEE87FFEA
+            7FFFE678FFF1BCFFFFFFFFFFFFFFFFFFFFE650FFE650FFE650FFE650FFE650FF
+            E650FFE650FFE650FFE650FFE650FFE650FFE650E6D865FFFD9FFFFB9DFFF898
+            FFF592FFF28DFFEE87FFEA7FFFF6D0FFFFFFFFFFFFFFFFFFFFE650FFE650FFE6
+            50FFE650FFE650FFE650FFE650FFE650FFE650FFE650FFE650FFE650ECD64DF5
+            F293FFFD9FFFFB9DFFF898FFF592FFF28DF5E57CFFFEFAFFFFFFFFFFFFFFFFFF
+            FFE650FFE650FFE650FFE650FFE650FFE650FFE650FFE650FFE650FFE650FFE6
+            50FFE650FFE650E3D156F5F293FFFD9FFFFB9DFFF898F8ED89E6D254FFFFFFFF
+            FFFFFFFFFFFFFFFFFFE650FFE650FFE650FFE650FFE650FFE650FFE650FFE650
+            FFE650FFE650FFE650FFE650FFE650FFE650EBD54CE5D864E6DB6DE6D763EDD7
+            4EFFE650FFFFFFFFFFFFFFFFFFFFFFFFFFE650FFE650FFE650FFE650FFE650FF
+            E650FFE650FFE650FFE650FFE650FFE650FFE650FFE650FFE650FFE650FFE650
+            FFE650FFE650FFE650FFE650FFFFFFFFFFFFFFFFFFFFFFFFFFE650FFE650FFE6
+            50FFE650FFE650FFE650FFE650FFE650FFE650FFE650FFE650FFE650FFE650FF
+            E650FFE650FFE650FFE650FFE650FFE650FFE650FFFFFFFFFFFFFFFFFFFFFFFF
+            FFE650FFE650FFE650FFE650FFE650FFE650FFE650FFE650FFE650FFE650FFE6
+            50FFE650FFE650FFE650FFE650FFE650FFE650FFE650FFE650FFE650FFFFFFFF
+            FFFFFFFFFFFFFFFFFFE650FFE650FFE650FFE650FFE650FFE650FFE650FFE650
+            FFE650FFE650FFE650FFE650FFE650FFE650FFE650FFE650FFE650FFE650FFE6
+            50FFE650FFFFFFFFFFFFFFFFFFFFFFFFFFE650FFE650FFE650FFE650FFE650FF
+            E650FFE650FFE650FFE650FFE650FFE650FFE650FFE650FFE650FFE650FFE650
+            FFE650FFE650FFE650FFE650FFFFFFFFFFFFFFFFFFFFFFFFFFE650FFE650FFE6
+            50FFE650FFE650FFE650FFE650FFE650FFE650FFE650FFE650FFE650FFE650FF
+            E650FFE650FFE650FFE650FFE650FFE650FFE650FFFFFFFFFFFFFFFFFFFFFFFF
+            E5B050E4AE50E2AE50E2AD50E1AD52DFAB52DEAB52DCAA52DCAA53D9A853D9A8
+            53D8A753D6A553D5A553D3A553D3A455D0A255D0A255CDA255CD9F56FFFFFFFF
+            FFFFFFFFFFFFFFFFD07600D98C19CF7B0ACE7B0BD48A1AC46E03DAA13FD8A341
+            D6A03FD49E3DD19C3CCF9939CD9837CA9536C79233C49031C28E2FBF8C2DBA86
+            28A3590BFFFFFFFFFFFFFFFFFFFFFFFFD17600F3C055D98E1DDC9528EEBA4CC5
+            6F03F0D277EFD377ECD072EACD6EE7CA6AE4C765E2C461DFC15DDCBE58D9BB54
+            D7B850D4B54BCFAF45A35A0BFFFFFFFFFFFFFFFFFFFFFFFFDB963ACF7501CC74
+            01CA7202C87102C56F03C36D03C06C04BE6A05BC6905B96706B76606B46407B2
+            6307B06108AD6008AB5E09A85D0AA65B0AB98144FFFFFFFFFFFFFFFFFFFFFFFF
+            FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+            FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+            FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+            FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+            FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+            FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+            FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+            FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+            FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF}
+          OnClick = btnBuscarPedidoClick
+        end
+        object btnCancelarPedido: TSpeedButton
+          Left = 588
+          Top = 16
+          Width = 136
+          Height = 30
+          Caption = 'Cancelar Pedido'
+          Glyph.Data = {
+            F6060000424DF606000000000000360000002800000018000000180000000100
+            180000000000C0060000120B0000120B00000000000000000000FFFFFFFFFFFF
+            FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+            FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+            FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+            FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+            FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB
+            FBFFBEBAF88278F1594BEC4032E83F31E75547EB7C72EFBBB6F7FBFBFEFFFFFF
+            FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+            FFFFFFFFC4C0F95C50EE3F31EA3D2FEA3C2DE93A2BE93829E83728E73526E734
+            24E64F40EABFBAF7FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+            FFFFFFFFFFFFFEFDFF9B93F54436EC4235EB4133EB3F31EA3D2FEA3C2DE93A2B
+            E93829E83728E73526E73424E63222E69087F0FDFDFFFFFFFFFFFFFFFFFFFFFF
+            FFFFFFFFFFFFFFFFFFFFFFFFFFFF9C95F6473AED4638ED4436EC4235EB4133EB
+            3F31EA3D2FEA3C2DE93A2BE93829E83728E73526E73424E63222E69188F1FFFF
+            FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFC5C1FA4A3EEE493CEE473AED46
+            38ED4436EC4235EB4133EB3F31EA3D2FEA3C2DE93A2BE93829E83728E73526E7
+            3424E63222E6BFBAF7FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFCFBFF655BF04C3F
+            EF4A3EEE493CEE473AED4638ED4436EC4235EB4133EB3F31EA3D2FEA3C2DE93A
+            2BE93829E83728E73526E73424E64C3FE8FAFAFEFFFFFFFFFFFFFFFFFFFFFFFF
+            C4C0FA4E42F04D40EF4C3FEF4A3EEE493CEE473AED4638ED4436EC4235EB4133
+            EB3F31EA3D2FEA3C2DE93A2BE93829E83728E73526E73424E6BBB6F7FFFFFFFF
+            FFFFFFFFFFFFFFFF8E86F65043F04E42F04D40EF4C3FEF4A3EEE493CEE473AED
+            4638ED4436EC4235EB4133EB3F31EA3D2FEA3C2DE93A2BE93829E83728E73526
+            E77D72EEFFFFFFFFFFFFFFFFFFFFFFFF6C62F25145F15043F04D41EC9790ECA8
+            A3EFA8A3EEA8A2EEA7A1EEA6A0EEA59FEDA49FEDA49EEDA39DECA29CEC8D86E8
+            392AE53829E83728E75547EBFFFFFFFFFFFFFFFFFFFFFFFF5A51F35246F15145
+            F14D40E7FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+            FFFFFFFFFFFFFFFF3A2BE13A2BE93829E84234E7FFFFFFFFFFFFFFFFFFFFFFFF
+            5D52F35348F25246F14E42E8FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+            FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF3B2DE13C2DE93A2BE94032E8FFFFFFFF
+            FFFFFFFFFFFFFFFF6F63F45549F25348F25145ED948DEC9E98ED9D98ED9C96EC
+            9C96EC9B95EC9B94EC9A93EB9A92EB9991EB9891EA8B83E83E30E63D2FEA3C2D
+            E9574BECFFFFFFFFFFFFFFFFFFFFFFFF918AF6564AF25549F25348F25246F151
+            45F15043F04E42F04D40EF4C3FEF4A3EEE493CEE473AED4638ED4436EC4235EB
+            4133EB3F31EA3D2FEA8278F1FFFFFFFFFFFFFFFFFFFFFFFFC6C2FB574CF3564A
+            F25549F25348F25246F15145F15043F04E42F04D40EF4C3FEF4A3EEE493CEE47
+            3AED4638ED4436EC4235EB4133EB3F31EABEBAF8FFFFFFFFFFFFFFFFFFFFFFFF
+            FBFBFF7065F5574CF3564AF25549F25348F25246F15145F15043F04E42F04D40
+            EF4C3FEF4A3EEE493CEE473AED4638ED4436EC4235EB5A4DEEFAFAFFFFFFFFFF
+            FFFFFFFFFFFFFFFFFFFFFFC9C6FB594DF3574CF3564AF25549F25348F25246F1
+            5145F15043F04E42F04D40EF4C3FEF4A3EEE493CEE473AED4638ED4436ECC4C0
+            F9FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFA49EF9594DF3574CF356
+            4AF25549F25348F25246F15145F15043F04E42F04D40EF4C3FEF4A3EEE493CEE
+            473AED9C94F5FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFDFD
+            FFA49EF9594DF3574CF3564AF25549F25348F25246F15145F15043F04E42F04D
+            40EF4C3FEF4A3EEE9C95F6FEFDFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+            FFFFFFFFFFFFFFFFFFFFFFFFC9C6FB6E65F5574CF3564AF25549F25348F25246
+            F15145F15043F04E42F06559F0C5C1FAFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+            FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFBFBFFC6C2FB928AF7
+            7066F45B51F35950F36C61F28E86F6C4C0FAFBFBFFFFFFFFFFFFFFFFFFFFFFFF
+            FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+            FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+            FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+            FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+            FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF}
+          OnClick = btnCancelarPedidoClick
+        end
+        object edtBuscaNumeroPedido: TEdit
+          Left = 7
+          Top = 21
+          Width = 121
+          Height = 23
+          NumbersOnly = True
+          TabOrder = 0
+        end
+      end
+      object plnDadosPedido: TPanel
+        AlignWithMargins = True
+        Left = 3
+        Top = 52
+        Width = 731
+        Height = 41
+        Align = alTop
+        BevelOuter = bvNone
+        Enabled = False
+        TabOrder = 1
+        ExplicitLeft = 128
+        ExplicitTop = 216
+        ExplicitWidth = 185
+        object edtConsultaNumeroPedido: TLabeledEdit
+          Left = 11
+          Top = 17
+          Width = 58
+          Height = 23
+          Color = clCream
+          EditLabel.Width = 55
+          EditLabel.Height = 15
+          EditLabel.Caption = 'N'#186' Pedido'
+          EditLabel.Color = clInfoBk
+          EditLabel.Font.Charset = DEFAULT_CHARSET
+          EditLabel.Font.Color = clWindowText
+          EditLabel.Font.Height = -12
+          EditLabel.Font.Name = 'Segoe UI'
+          EditLabel.Font.Style = [fsBold]
+          EditLabel.ParentColor = False
+          EditLabel.ParentFont = False
+          TabOrder = 0
+          Text = ''
+          OnExit = edtCodigoProdutoExit
+        end
+        object edtConsultaCliente: TLabeledEdit
+          Left = 79
+          Top = 18
+          Width = 362
+          Height = 23
+          Color = clCream
+          EditLabel.Width = 39
+          EditLabel.Height = 15
+          EditLabel.Caption = 'Cliente'
+          EditLabel.Color = clInfoBk
+          EditLabel.Font.Charset = DEFAULT_CHARSET
+          EditLabel.Font.Color = clWindowText
+          EditLabel.Font.Height = -12
+          EditLabel.Font.Name = 'Segoe UI'
+          EditLabel.Font.Style = [fsBold]
+          EditLabel.ParentColor = False
+          EditLabel.ParentFont = False
+          TabOrder = 1
+          Text = ''
+          OnExit = edtCodigoProdutoExit
+        end
+        object edtConsultaData: TLabeledEdit
+          Left = 451
+          Top = 18
+          Width = 94
+          Height = 23
+          Color = clCream
+          EditLabel.Width = 67
+          EditLabel.Height = 15
+          EditLabel.Caption = 'Data Pedido'
+          EditLabel.Color = clInfoBk
+          EditLabel.Font.Charset = DEFAULT_CHARSET
+          EditLabel.Font.Color = clWindowText
+          EditLabel.Font.Height = -12
+          EditLabel.Font.Name = 'Segoe UI'
+          EditLabel.Font.Style = [fsBold]
+          EditLabel.ParentColor = False
+          EditLabel.ParentFont = False
+          TabOrder = 2
+          Text = ''
+          OnExit = edtCodigoProdutoExit
+        end
+        object edtConsultaValorTotal: TLabeledEdit
+          Left = 560
+          Top = 18
+          Width = 153
+          Height = 23
+          Alignment = taRightJustify
+          Color = clCream
+          EditLabel.Width = 58
+          EditLabel.Height = 15
+          EditLabel.Caption = 'Valor Total'
+          EditLabel.Color = clInfoBk
+          EditLabel.Font.Charset = DEFAULT_CHARSET
+          EditLabel.Font.Color = clWindowText
+          EditLabel.Font.Height = -12
+          EditLabel.Font.Name = 'Segoe UI'
+          EditLabel.Font.Style = [fsBold]
+          EditLabel.ParentColor = False
+          EditLabel.ParentFont = False
+          TabOrder = 3
+          Text = ''
+          OnExit = edtCodigoProdutoExit
+        end
+      end
+      object GroupBox1: TGroupBox
+        Left = 0
+        Top = 96
+        Width = 737
+        Height = 525
+        Align = alClient
+        Caption = 'Itens'
+        DefaultHeaderFont = False
+        HeaderFont.Charset = DEFAULT_CHARSET
+        HeaderFont.Color = clWindowText
+        HeaderFont.Height = -12
+        HeaderFont.Name = 'Segoe UI'
+        HeaderFont.Style = [fsBold]
+        TabOrder = 2
+        ExplicitLeft = 240
+        ExplicitTop = 272
+        ExplicitWidth = 185
+        ExplicitHeight = 105
+        object grdItensConsulta: TStringGrid
+          AlignWithMargins = True
+          Left = 5
+          Top = 20
+          Width = 727
+          Height = 500
+          Align = alClient
+          DefaultColWidth = 120
+          FixedCols = 0
+          Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goRowSelect, goFixedRowDefAlign]
+          TabOrder = 0
+          ExplicitHeight = 464
+        end
+      end
+    end
+  end
+end
