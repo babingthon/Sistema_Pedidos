@@ -64,8 +64,8 @@ Este comando irá:
 
 ### 2. Configurar a Conexão
 
-1.  Verifique se o arquivo `libmysql.dll` de 32-bits está na pasta `App/Release/`.
-2.  Verifique o arquivo `database.ini` localizado na pasta `App/Release/`. Os valores padrão já estão configurados para se conectar ao container Docker.
+1.  Verifique se o arquivo `libmysql.dll` de 32-bits está na pasta `App/`.
+2.  Verifique o arquivo `database.ini` localizado na pasta `App/`. Os valores padrão já estão configurados para se conectar ao container Docker.
 
 ### 3. Compilar e Executar
 
